@@ -32,7 +32,7 @@ A comprehensive client and purchase management system for Rios del Desierto SAS.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/web-rios-del-desierto.git
+   git clone https://github.com/diego1193/Web-Rios-del-Desierto.git
    cd web-rios-del-desierto
    ```
 
@@ -58,7 +58,6 @@ The application automatically creates an admin user on first startup:
 - **Password**: 1234
 - **Email**: admin@example.com
 
-*Note: For production, change these credentials immediately after first login.*
 
 ## Environment Variables
 
