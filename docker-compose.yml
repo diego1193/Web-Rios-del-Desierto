@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    restart: always
+    environment:
+      - DEBUG=1
+      - SECRET_KEY=${SECRET_KEY:-default_key_change_in_production}
+      - ALLOWED_HOSTS=localhost,127.0.0.1
+      - DJANGO_SUPERUSER_USERNAME=admin
+      - DJANGO_SUPERUSER_PASSWORD=1234
+      - DJANGO_SUPERUSER_EMAIL=admin@example.com
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - static_volume:/app/staticfiles
+      - sqlite_data:/app/db
+    command: >
+      bash -c "mkdir -p /app/static &&
+               python manage.py makemigrations reports &&
+               python manage.py migrate &&
+               python manage.py createsuperuser --noinput || echo 'Superuser already exists' &&
+               python manage.py load_test_data || echo 'Test data loading failed, continuing anyway' &&
+               gunicorn web_sac.wsgi:application --bind 0.0.0.0:8000 --timeout 120 --workers 1"
+
+volumes:
+  static_volume:
+  sqlite_data: 

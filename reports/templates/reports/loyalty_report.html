@@ -1,0 +1,41 @@
+{% extends 'clients/base.html' %}
+{% load static %}
+
+{% block title %}Loyalty Report - Rios del desierto SAS{% endblock %}
+
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-header bg-primary text-white">
+        <h1 class="h3 m-0">Loyalty Program Report</h1>
+    </div>
+    <div class="card-body">
+        <div class="mb-4">
+            <h2 class="h4 mb-3">About the Loyalty Program</h2>
+            <p>
+                The Loyalty Program report identifies valuable clients who have made significant purchases in the previous month. 
+                These are clients with total purchases exceeding 5,000,000 COP during the previous calendar month.
+            </p>
+            <p>
+                This report provides a list of all loyalty-eligible clients along with their contact information and total purchases amount.
+                It helps our company identify and reward our most valuable customers.
+            </p>
+            <div class="alert alert-info">
+                <i class="bi bi-info-circle-fill me-2"></i>
+                The report generates an Excel file containing data from the previous month. It can be used for marketing campaigns, 
+                special promotions, and customer relationship management.
+            </div>
+        </div>
+        
+        <hr class="my-4">
+        
+        <div class="text-center">
+            <h3 class="h5 mb-3">Generate Loyalty Report</h3>
+            <p class="text-muted mb-4">Click the button below to generate and download the loyalty report for the previous month.</p>
+            
+            <a href="{% url 'download_loyalty_report' %}" class="btn btn-lg btn-success">
+                <i class="bi bi-file-earmark-excel me-2"></i> Download Excel Report
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %} 

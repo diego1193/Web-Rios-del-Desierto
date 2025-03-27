@@ -1,0 +1,187 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f8f9fa;
+}
+
+h1 {
+    color: #333;
+}
+
+.search-form {
+    background: transparent;
+    padding: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+select, input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    background: #4285f4;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #3367d6;
+}
+
+.result-container {
+    display: none;
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.error {
+    color: red;
+    margin: 10px 0;
+}
+
+.export-buttons {
+    margin-top: 15px;
+}
+
+.export-buttons button {
+    margin-right: 10px;
+    background: #34a853;
+}
+
+.export-buttons button:hover {
+    background: #2d9144;
+}
+
+/* Table styles */
+.client-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.client-table th {
+    text-align: left;
+    padding: 8px;
+    background-color: #f8f9fa;
+}
+
+.client-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+/* Custom styles to complement Bootstrap */
+.card {
+    border: none;
+    border-radius: 8px;
+}
+
+.card-header {
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+}
+
+.search-form {
+    background: transparent;
+    padding: 0;
+}
+
+.form-label {
+    font-weight: 500;
+}
+
+/* Custom styling for table */
+.table th {
+    background-color: #f8f9fa;
+}
+
+/* Make export buttons more prominent */
+.export-buttons .btn {
+    padding: 8px 16px;
+    margin-right: 5px;
+}
+
+/* Add a subtle hover effect */
+.card:hover {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .btn-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        margin-bottom: 5px;
+        margin-right: 0;
+        border-radius: 4px !important;
+    }
+}
+
+/* Additional styles for the menu */
+.navbar-brand {
+    font-weight: bold;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+/* Style for the form validation */
+.form-control.is-invalid {
+    border-color: #dc3545;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right calc(.375em + .1875rem) center;
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+/* Required field indicator */
+.text-danger {
+    color: #dc3545 !important;
+}
+
+/* Card hover effect */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+}
+
+/* Better spacing for forms */
+.form-label {
+    margin-bottom: 0.3rem;
+    font-weight: 500;
+}
+
+/* Better mobile experience */
+@media (max-width: 768px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+} 
