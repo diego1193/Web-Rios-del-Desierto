@@ -145,42 +145,51 @@ The `docker-compose.yml` file defines the following:
 
 ### Project Structure
 
+```
 web-rios-del-desierto/
-├── clients/ # Client management app
-│ ├── management/ # Custom management commands
-│ │ └── commands/
-│ │ └── load_test_data.py # Data loading command
-│ ├── migrations/ # Database migrations
-│ ├── static/ # Static assets for client app
-│ │ └── clients/
-│ │ └── js/
-│ │ └── add_client.js
-│ ├── templates/ # HTML templates
-│ ├── models.py # Client data models
-│ └── views.py # Client view functions
-├── reports/ # Reporting and purchase app
-│ ├── migrations/ # Database migrations
-│ ├── static/ # Static assets
-│ │ └── reports/
-│ │ └── js/
-│ │ └── manage_purchases.js
-│ ├── templates/ # HTML templates
-│ │ └── reports/
-│ │ ├── loyalty_report.html
-│ │ └── manage_purchases.html
-│ ├── models.py # Purchase data models
-│ └── views.py # Report view functions
-├── web_sac/ # Main project directory
-│ ├── settings.py # Base settings
-│ ├── settings_docker.py # Docker-specific settings
-│ ├── urls.py # URL routes
-│ └── wsgi.py # WSGI entry point
-├── .dockerignore # Files to exclude from Docker context
-├── .env # Environment variables
-├── docker-compose.yml # Docker Compose configuration
-├── Dockerfile # Docker build instructions
-├── manage.py # Django management script
-└── requirements.txt # Python dependencies
+├── clients/                         # Client management app
+│   ├── management/                  # Custom management commands
+│   │   └── commands/
+│   │       └── load_test_data.py    # Data loading command
+│   ├── migrations/                  # Database migrations
+│   ├── static/                      # Static assets for client app
+│   │   └── clients/
+│   │       ├── css/
+│   │       │   └── styles.css
+│   │       └── js/
+│   │           └── add_client.js
+│   ├── templates/                   # HTML templates
+│   │   └── clients/
+│   │       ├── base.html
+│   │       ├── search.html
+│   │       └── add_client.html
+│   ├── models.py                    # Client data models
+│   └── views.py                     # Client view functions
+├── reports/                         # Reporting and purchase app
+│   ├── migrations/                  # Database migrations
+│   ├── static/                      # Static assets
+│   │   └── reports/
+│   │       └── js/
+│   │           └── manage_purchases.js
+│   ├── templates/                   # HTML templates
+│   │   └── reports/
+│   │       ├── loyalty_report.html
+│   │       └── manage_purchases.html
+│   ├── models.py                    # Purchase data models
+│   └── views.py                     # Report view functions
+├── web_sac/                         # Main project directory
+│   ├── settings.py                  # Base settings
+│   ├── settings_docker.py           # Docker-specific settings
+│   ├── urls.py                      # URL routes
+│   └── wsgi.py                      # WSGI entry point
+├── .dockerignore                    # Files to exclude from Docker context
+├── .env                             # Environment variables
+├── docker-compose.yml               # Docker Compose configuration
+├── Dockerfile                       # Docker build instructions
+├── manage.py                        # Django management script
+├── README.md                        # Project documentation
+└── requirements.txt                 # Python dependencies
+```
 
 ### Local Development with Docker
 
